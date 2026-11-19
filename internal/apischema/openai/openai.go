@@ -2069,6 +2069,11 @@ type GCPVertexAIVendorFields struct {
 	//
 	// https://cloud.google.com/vertex-ai/docs/reference/rest/v1/SafetySetting
 	SafetySettings []*genai.SafetySetting `json:"safetySettings,omitzero"`
+
+	// CachedContent is the fully-qualified resource name of a Vertex context cache
+	// to reference for this request:
+	// projects/{project}/locations/{location}/cachedContents/{id}.
+	CachedContent string `json:"cachedContent,omitempty"`
 }
 
 // GCPVertexAIGenerationConfig represents Gemini generation configuration options.
